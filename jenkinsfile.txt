@@ -2,7 +2,7 @@ properties([
     [$class: 'GithubProjectProperty',
     displayName: 'nikhila',
     projectUrlStr: 'https://github.com/nikhilachowdary/testhub.git/'],
-    properties([pipelineTriggers([upstream('master, ')])])
+    pipelineTriggers([upstream('master')])])
  agent any
 
  stages{
