@@ -3,8 +3,8 @@ properties([
     displayName: 'nikhila',
     projectUrlStr: 'https://github.com/nikhilachowdary/testhub.git/'],
     pipelineTriggers([upstream('master')])])
+    pipeline{
  agent any
-
  stages{
   stage('build'){
    steps{
