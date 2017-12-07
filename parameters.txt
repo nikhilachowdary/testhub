@@ -1,0 +1,18 @@
+pipeline {
+agent any
+parameters{
+string(name: 'BRANCH',defaultValue:'default',description:'select branch name')
+booleanParam(defaultValue:true,description:'should we deploy the application?',name:'deploy')
+choice(choices:'integration',description:'used for posgress.sh and CodeDeploy deployment group',name:'ENVIRONMENT')
+}
+stages{
+stage('Example'){
+steps{
+echo"${params.BRANCH}"
+echo"${params.Deploy}"
+echo"${params.Rebuild_Database}"
+echo"${params.ENVIRONMENT}"
+}
+}
+}
+}
